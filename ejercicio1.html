@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let preguntaPelicula=prompt("¿Qué película desea ver? Coloque el número que corresponda a la película deseada  1.Spider-Man: Sin Camino a Casa 2.Avengers: Endgame 3.Jurassic World - Mundo Jurásico 4. Los Minions 5.Viaje al centro de la tierra  ");
+        while(preguntaPelicula==="")
+        {
+            alert("No se aceptan campos vacios, coloque un número correcto");
+            let preguntaPelicula=prompt("¿Qué película desea ver? Coloque el número que corresponda a la película deseada  1.Spider-Man: Sin Camino a Casa 2.Avengers: Endgame 3.Jurassic World - Mundo Jurásico 4. Los Minions 5.Viaje al centro de la tierra  ");
+        }
+        eleccionPelicula(preguntaPelicula);
+
+    
+        
+       function eleccionPelicula(preguntaPelicula){
+            switch(preguntaPelicula)
+            {       case "1":
+                        preguntaBoleta=prompt("¿Cuántos boletos va a comprar?");
+                        valorBoleta(preguntaBoleta);
+                     break;
+                    case"2":
+                        preguntaBoleta=prompt("¿Cuántos boletos va a comprar?");
+                        valorBoleta(preguntaBoleta);
+                    break;
+                    case "3":
+                        preguntaBoleta=prompt("¿Cuántos boletos va a comprar?");
+                        valorBoleta(preguntaBoleta);
+                    break;
+                    case"4":
+                        preguntaBoleta=prompt("¿Cuántos boletos va a comprar?");
+                        valorBoleta(preguntaBoleta);
+                    break;
+                    case "5":
+                        preguntaBoleta=prompt("¿Cuántos boletos va a comprar?");
+                        valorBoleta(preguntaBoleta);
+                    break;
+                    default:
+                        alert("Incorrecto, esta pelicula no se encuentra en cartelera");
+                        let preguntaPelicula=prompt("¿Qué película desea ver? Coloque el número que corresponda a la película deseada  1.Spider-Man: Sin Camino a Casa 2.Avengers: Endgame 3.Jurassic World - Mundo Jurásico 4. Los Minions 5.Viaje al centro de la tierra  ");
+                    break;
+                }
+            } 
+
+            function valorBoleta( preguntaBoleta){
+                {
+                        const nota=document.createElement("p");
+                        document.body.append(nota);
+                        
+                      
+                        let boleto=10000;
+                        let totalTarifa=boleto*preguntaBoleta;
+                        let descuento=((totalTarifa*5)/100);
+                        let tarifaDescuento=totalTarifa-descuento;
+                        if(preguntaBoleta>5)
+                        { 
+                            nota.innerText=("Usted ha comprado"+preguntaBoleta+" boletas, tiene un 5% de descuento, así que debe de pagar:"+tarifaDescuento);
+                        }
+                        else
+                        {
+                            nota.innerText=("Usted ha comprado: "+preguntaBoleta+" boletas, en total es: "+totalTarifa)
+                        }  
+
+                    }
+            }
+              
+    </script>
+</body>
+</html>

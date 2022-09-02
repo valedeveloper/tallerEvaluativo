@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const nota=document.createElement("p");
+        document.body.append(nota);
+       
+        const operador=prompt("¡Bienvenidos!Escoja la operación que quiere hacer (Escoger por Número)  1.Suma 2.Resta 3.Multiplicación 4.División");
+        let numero1=prompt("Elegir el número 1");
+        let numero2=prompt("Elegir el número 2");   
+            
+        
+        function operacionResult(operador){
+            switch(operador)
+            {
+                case "1":
+                    SumaOperacion(numero1,numero2);
+                break;
+                case "2":
+                    RestaOperacion(numero1,numero2);
+                break;
+                case "3":
+                    MultiplicaciónOperacion(numero1,numero2)
+                break;
+                case "4": 
+                    DivisiónOperacion(numero1,numero2)
+                break;
+                default:
+                    alert("No se encuentra dentro de las opciones disponibles.")
+                    const operador=prompt("¡Bienvenidos!Escoja la operación que quiere hacer (Escoger por Número)  1.Suma 2.Resta 3.Multiplicación 4.División");
+                break;
+            } 
+            
+        }
+        function SumaOperacion(numero1,numero2){ 
+            let suma=numero1+numero2;
+            nota.innerText="La suma de "+numero1+ "y de "+numero2+ "es: "+suma; 
+        }
+        function RestaOperacion(numero1,numero2){ 
+            let resta=numero1-numero2;
+            nota.innerText="La Resta de "+numero1+ "y de "+numero2+ "es: "+resta; 
+        }
+        function MultiplicaciónOperacion(numero1,numero2){ 
+            let mult=numero1*numero2;
+            nota.innerText="La multiplicación de "+numero1+ "y de "+numero2+ "es: "+mult; 
+        }
+        function DivisiónOperacion(numero1,numero2){ 
+            if(numero2==0)
+            {
+                alert("El denominador no puede ser 0");
+                let numero2=prompt("Elegir el número 2");
+                let divi=numero1/numero2;
+                nota.innerText="La División de "+numero1+ "y de "+numero2+ "es: "+divi; 
+            }
+            else
+            {
+                let divi=numero1/numero2;
+                nota.innerText="La División de "+numero1+ "y de "+numero2+ "es: "+divi; 
+            }
+        }
+        operacionResult(operador)
+
+    </script>
+</body>
+</html>

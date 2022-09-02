@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palabraUsuario=prompt("Digite una palabra")
+        const resultado=document.createElement("p");
+        document.body.append(resultado);
+        palabraPalindroma(palabraUsuario);
+
+
+
+
+        
+
+        function palabraPalindroma(palabraUsuario){
+            let palabraSeparada=palabraUsuario.split(""); //Separa las palabras por carácteres
+            let palabraReverse=palabraSeparada.reverse();//Voltea la palabra
+            let palabraJunta=palabraReverse.join("")//Une la palabra
+            palabraUsuario==palabraJunta?resultado.innerText="Sí, es palìndroma":resultado.innerText="No es es palìndroma";
+        }
+ 
+
+        
+    </script>
+</body>
+</html>

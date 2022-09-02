@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nota=document.createElement("p");
+        document.body.append(nota);
+        const nota2=document.createElement("p");
+        document.body.append(nota2);
+        const nota3=document.createElement("p");
+        document.body.append(nota3);
+        var numerosUsuario=new Array();
+
+        for(i=1;i<=10;i++)
+        {
+            const numeroElegido=prompt("Escribe un número "+i);
+            if(numeroElegido=="" || numeroElegido<0  )
+            { 
+                alert("No se aceptan valores nulos o negatios");
+                const numeroElegido=prompt("Escribe un número "+i);
+            }
+            else
+            {
+                numerosUsuario [i]=numeroElegido;
+            }
+        }
+        nota.innerText="Los números digitados fueron: "+numerosUsuario;
+
+        var numerosPares=numerosUsuario.filter((numero)=>{
+            if(numero%2==0)
+            return numero
+        })
+        nota2.innerText=("De los números digitados," +numerosPares.length+" son pares son: "+numerosPares);
+
+
+        var numerosImpares=numerosUsuario.filter((numero)=>{
+            if(numero%2 != 0)
+            {
+                return numero;
+            }})
+
+        nota3.innerText=("De los números digitados," +numerosImpares.length+" los impares son: "+numerosImpares);
+
+    </script>
+</body>
+</html>
